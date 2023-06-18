@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity21">
+
+    <ScrollView
+        android:layout_width="405dp"
+        android:layout_height="663dp"
+        android:layout_marginTop="88dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textViewRemedio1"
+                    android:layout_width="395dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/rem_dio_1"
+                    android:textSize="22sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/dose_di_ria248"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextNumberDecimal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/comprimidos_p_dia112"
+                    android:inputType="numberDecimal"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/atualizar_n22"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextNumberDecimal2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/novo_n221"
+                    android:inputType="numberDecimal"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="394dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/rem_dio_236"
+                    android:textSize="22sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/dose_di_ria88"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextNumberDecimal3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/comprimidos_p_dia11123"
+                    android:inputType="numberDecimal"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/atualizar_n556"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextNumberDecimal4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Novo Nº"
+                    android:inputType="numberDecimal"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="346dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/mudar_nomes99"
+                    android:textSize="22sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/rem_dio_1224"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextNumberDecimal5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/renomear_rem_dio_1332"
+                    android:inputType="numberDecimal"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" >
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/rem_dio_233"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextNumberDecimal6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/renomear_rem_dio_2331"
+                    android:inputType="numberDecimal"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </TableRow>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/configura_es2"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
