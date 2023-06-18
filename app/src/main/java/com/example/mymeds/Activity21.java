@@ -11,6 +11,8 @@ public class Activity21 extends AppCompatActivity {
     private EditText atual1;
     private EditText atual2;
     private DadosDAO dao;
+    private String novoTeste = "Teste";
+    private String novoTeste2 = "teste2";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
