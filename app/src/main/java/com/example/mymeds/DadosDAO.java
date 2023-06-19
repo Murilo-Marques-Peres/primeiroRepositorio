@@ -24,13 +24,6 @@ public class DadosDAO {
             banco.insert("dados", null, values);
             x++;
         }
-        if(x==1){
-            ContentValues values = new ContentValues();
-            values.put("numero", dados.getNumero());
-            values.put("dose", dados.getDose());
-            banco.insert("dados", null, values);
-            x++;
-        }
     }
     public void atualizar1(Dados dados){
         Cursor cursor = banco.query("dados", new String[]{"id", "nome", "numero", "dose"}, null, null, null, null, null);
@@ -92,8 +85,20 @@ public class DadosDAO {
             }
             x++;
         }
-
         return numeroPesquisado2;
+    }
+    public void definirDezembro(Dados dados){
+        Cursor cursor = banco.query("dados", new String[]{"id", "nome", "numero", "dose", "numeroDez"}, null, null, null, null, null);
+        if(!cursor.moveToNext()){
+            ContentValues values = new ContentValues();
+            values.put("numeroDez", dados.getNumero());
+            banco.insert("dados", null, values);
+        }
+        if(cursor.moveToNext()){
+            ContentValues values = new ContentValues();
+            values.put("numeroDez", dados.getNumero());
+            banco.insert("dados", null, values);
+        }
     }
 }
 

@@ -54,5 +54,7 @@ public class Activity21 extends AppCompatActivity {
         dao.inserir(dados2);
         dao.atualizar1(dados1);
         dao.atualizar2(dados2);
+        dao.definirDezembro(dados1);
+        dao.definirDezembro(dados2);
     }
 }
