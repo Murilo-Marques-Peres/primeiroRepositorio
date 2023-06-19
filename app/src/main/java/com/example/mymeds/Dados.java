@@ -3,10 +3,10 @@ package com.example.mymeds;
 import java.io.Serializable;
 
 public class Dados implements Serializable {
-    private Integer id;
-    private Integer numero;
+    private int id;
+    private int numero;
 
-    public Integer getDose() {
+    public int getDose() {
         return dose;
     }
 
@@ -14,22 +14,22 @@ public class Dados implements Serializable {
         this.dose = dose;
     }
 
-    private Integer dose;
+    private int dose;
     private String nome;
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public Integer getNumero() {
+    public int getNumero() {
         return numero;
     }
 
-    public void setNumero(Integer numero) {
+    public void setNumero(int numero) {
         this.numero = numero;
     }
 

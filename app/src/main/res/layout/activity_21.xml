@@ -132,7 +132,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="Novo Nº"
+                    android:hint="@string/novo_n332"
                     android:inputType="numberDecimal"
                     tools:ignore="TouchTargetSizeCheck" />
 
@@ -198,6 +198,13 @@
                     tools:ignore="TouchTargetSizeCheck" />
 
             </TableRow>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="Salvar"
+                android:text="@string/atualizar2" />
         </LinearLayout>
     </ScrollView>
 
