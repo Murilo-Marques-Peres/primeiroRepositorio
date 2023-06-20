@@ -88,7 +88,7 @@ public class Activity3 extends AppCompatActivity {
 
 
         int valor1Integer = dao.devolverDez1();
-        int valorHoje = valor1Integer - CalcularAtualNovo();
+        int valorHoje = valor1Integer - ((CalcularAtualNovo()) * dao.devolverDose1());
         while(valorHoje<=0){
             valorHoje += 30;
         }

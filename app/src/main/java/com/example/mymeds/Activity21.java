@@ -16,7 +16,7 @@ public class Activity21 extends AppCompatActivity {
     private EditText atual1;
     private EditText atual2;
     private DadosDAO dao;
-    public int CalcularAtual(int atual1Novo){
+    public int CalcularAtual(int atual1Novo, int dose12){
         Calendar cal = Calendar.getInstance();
         Date data = (Date) cal.getTime();
         String a1 = String.valueOf(data);
@@ -75,7 +75,7 @@ public class Activity21 extends AppCompatActivity {
             soma_meses_completos = soma_meses_completos + lista_meses.get(x2);
         }
         soma_dias_atuais = soma_meses_completos + dia_atual_integer;
-        int remedioDez = atual1Novo + soma_dias_atuais;
+        int remedioDez = atual1Novo + (soma_dias_atuais * dose12);
         while(remedioDez>30){
             remedioDez-=30;
         }
@@ -99,21 +99,23 @@ public class Activity21 extends AppCompatActivity {
         int atual1Convertido = 1;
         int atual2Convertido = 1;
         int numeroDez1 = 1;
+        int dose1Convertido = 1;
+        int dose2Convertido = 1;
 
         if(!atual1String.equals("")){
             atual1Convertido = Integer.valueOf(atual1String);
             dados1.setNumero(atual1Convertido);
         }
 
-        dados1.setNumeroDezem(CalcularAtual(atual1Convertido));;
 
 
         String dose1String = dose1.getText().toString();
-        if(dose1String.equals("")){
-            Integer dose1Convertido = Integer.valueOf(dose1String);
+        if(!dose1String.equals("")){
+            dose1Convertido = Integer.valueOf(dose1String);
             dados1.setDose(dose1Convertido);
         }
 
+        dados1.setNumeroDezem(CalcularAtual(atual1Convertido, dose1Convertido));
         Dados dados2 = new Dados();
 
         String atual2String = atual2.getText().toString();
@@ -123,10 +125,10 @@ public class Activity21 extends AppCompatActivity {
         }
         String dose2String = dose2.getText().toString();
         if(dose2String.equals("")){
-            Integer dose2Convertido = Integer.valueOf(dose2String);
+            dose2Convertido = Integer.valueOf(dose2String);
             dados2.setDose(dose2Convertido);
         }
-        dados2.setNumeroDezem(CalcularAtual(atual2Convertido));
+        dados2.setNumeroDezem(CalcularAtual(atual2Convertido, dose2Convertido));
 
 
 

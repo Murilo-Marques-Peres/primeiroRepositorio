@@ -38,10 +38,10 @@ public class DadosDAO {
             String index = "1";
             banco.update("dados", values,"id = ?", new String[]{index});
 
-            ContentValues values2 = new ContentValues();
+            /*ContentValues values2 = new ContentValues();
             values2.put("numero", dados.getNumero());
             values2.put("dose", dados.getDose());
-            banco.insert("dados", null, values2);
+            banco.insert("dados", null, values2);*/
 
         }
     }
@@ -164,6 +164,18 @@ public class DadosDAO {
             }
             x++;
 
+        }
+        return numeroRequerido;
+    }
+    public int devolverDose1(){
+        int x= 0;
+        int numeroRequerido = 0;
+        Cursor cursor = banco.query("dados", new String[]{"id", "nome", "numero", "dose", "numeroDez"}, null, null, null, null, null);
+        while(cursor.moveToNext()){
+            if(x==0){
+                numeroRequerido = cursor.getInt(3);
+            }
+            x++;
         }
         return numeroRequerido;
     }
