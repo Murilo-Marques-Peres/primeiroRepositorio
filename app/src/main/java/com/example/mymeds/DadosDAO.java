@@ -26,6 +26,7 @@ public class DadosDAO {
             banco.insert("dados", null, values);
             x++;
         }
+        //cursor.close();
     }
     public void atualizar1(Dados dados){
         Cursor cursor = banco.query("dados", new String[]{"id", "nome", "numero", "dose", "numeroDez"}, null, null, null, null, null);
@@ -106,12 +107,14 @@ public class DadosDAO {
     public void definirDezembro2(Dados dados){
         Cursor cursor = banco.query("dados", new String[]{"id", "nome", "numero", "dose", "numeroDez"}, null, null, null, null, null);
         if(cursor.moveToNext()){
-            ContentValues values = new ContentValues();
-            values.put("numeroDez", dados.getNumeroDezem());
+            if(cursor.moveToNext()){
+                ContentValues values = new ContentValues();
+                values.put("numeroDez", dados.getNumeroDezem());
 
-            String index = "2";
-            banco.update("dados", values, "id=?", new String[]{index});
+                String index = "2";
+                banco.update("dados", values, "id=?", new String[]{index});
 
+            }
         }
 
     }
@@ -167,12 +170,37 @@ public class DadosDAO {
         }
         return numeroRequerido;
     }
+    public int devolverNum2(){
+        int x = 0;
+        int numeroRequerido = 0;
+        Cursor cursor = banco.query("dados", new String[]{"id", "nome", "numero", "dose", "numeroDez"}, null, null, null, null, null);
+        while(cursor.moveToNext()){
+            if(x==1){
+                numeroRequerido = cursor.getInt(2);
+            }
+            x++;
+
+        }
+        return numeroRequerido;
+    }
     public int devolverDose1(){
         int x= 0;
         int numeroRequerido = 0;
         Cursor cursor = banco.query("dados", new String[]{"id", "nome", "numero", "dose", "numeroDez"}, null, null, null, null, null);
         while(cursor.moveToNext()){
             if(x==0){
+                numeroRequerido = cursor.getInt(3);
+            }
+            x++;
+        }
+        return numeroRequerido;
+    }
+    public int devolverDose2(){
+        int x= 0;
+        int numeroRequerido = 0;
+        Cursor cursor = banco.query("dados", new String[]{"id", "nome", "numero", "dose", "numeroDez"}, null, null, null, null, null);
+        while(cursor.moveToNext()){
+            if(x==1){
                 numeroRequerido = cursor.getInt(3);
             }
             x++;

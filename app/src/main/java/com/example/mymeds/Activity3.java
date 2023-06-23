@@ -13,7 +13,7 @@ public class Activity3 extends AppCompatActivity {
     private TextView campo1;
     private TextView campo2;
     private DadosDAO dao;
-    public int CalcularAtualNovo(){
+    public int CalcularAtualNovo(int numeroIdRemedio){
         Calendar cal = Calendar.getInstance();
         Date data = (Date) cal.getTime();
         String a1 = String.valueOf(data);
@@ -72,9 +72,19 @@ public class Activity3 extends AppCompatActivity {
             soma_meses_completos = soma_meses_completos + lista_meses.get(x2);
         }
         soma_dias_atuais = soma_meses_completos + dia_atual_integer;
-        int remedioDez = dao.devolverNum1() + soma_dias_atuais;
-        while(remedioDez>30){
-            remedioDez-=30;
+        if(numeroIdRemedio==1){
+            int remedioDez = dao.devolverNum1() + soma_dias_atuais;
+            while(remedioDez>30){
+                remedioDez-=30;
+            }
+            return soma_dias_atuais;
+        }
+        if(numeroIdRemedio==2){
+            int remedioDez = dao.devolverNum2() + soma_dias_atuais;
+            while(remedioDez>30){
+                remedioDez-=30;
+            }
+
         }
         return soma_dias_atuais;
     }
@@ -85,19 +95,27 @@ public class Activity3 extends AppCompatActivity {
         campo1 = findViewById(R.id.textView4);
         campo2 = findViewById(R.id.textView6);
         dao = new DadosDAO(this);
+        int numeroRemedio = 1;
 
 
         int valor1Integer = dao.devolverDez1();
-        int valorHoje = valor1Integer - ((CalcularAtualNovo()) * dao.devolverDose1());
+        int valorHoje = valor1Integer - ((CalcularAtualNovo(numeroRemedio)) * dao.devolverDose1());
         while(valorHoje<=0){
             valorHoje += 30;
         }
 
         String valor1Convertido = String.valueOf(valorHoje);
         campo1.setText(valor1Convertido);
+        numeroRemedio++;
+
+        int valor2Integer = dao.devolverDez2();
+        int valorHoje2 = valor2Integer - ((CalcularAtualNovo(numeroRemedio)) * dao.devolverDose2());
+        while(valorHoje2<=0){
+            valorHoje2 += 30;
+        }
 
         int valor1Integer2 = dao.devolverDez2();
-        String valor1Convertido2 = String.valueOf(valor1Integer2);
+        String valor1Convertido2 = String.valueOf(valorHoje2);
         campo2.setText(valor1Convertido2);
 
     }

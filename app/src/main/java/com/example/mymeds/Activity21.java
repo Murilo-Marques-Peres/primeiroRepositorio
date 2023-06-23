@@ -99,6 +99,7 @@ public class Activity21 extends AppCompatActivity {
         int atual1Convertido = 1;
         int atual2Convertido = 1;
         int numeroDez1 = 1;
+        int numeroDez2 = 1;
         int dose1Convertido = 1;
         int dose2Convertido = 1;
 
@@ -124,7 +125,7 @@ public class Activity21 extends AppCompatActivity {
             dados2.setNumero(atual2Convertido);
         }
         String dose2String = dose2.getText().toString();
-        if(dose2String.equals("")){
+        if(!dose2String.equals("")){
             dose2Convertido = Integer.valueOf(dose2String);
             dados2.setDose(dose2Convertido);
         }
